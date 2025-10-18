@@ -4,3 +4,6 @@ tsconfig.json
 *.log
 node_modules/
 .DS_Store
+.github/
+coverage/
+*.tsbuildinfo

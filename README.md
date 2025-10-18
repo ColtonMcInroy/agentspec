@@ -2,6 +2,8 @@
 
 A tool for enhancing guided agentic development with structured specifications and workflows.
 
+> **⚠️ Development Status:** This project is currently under active development and is recommended for testing purposes only. APIs and workflows may change between versions.
+
 ## Overview
 
 AgentSpec solves the problem of context loss and lack of structure in AI-assisted development. Unlike "vibe coding" or basic spec-driven approaches, AgentSpec provides:

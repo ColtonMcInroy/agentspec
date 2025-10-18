@@ -22,8 +22,22 @@
     "workflow",
     "cli"
   ],
-  "author": "",
+  "author": "AgentSpec",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ColtonMcInroy/agentspec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ColtonMcInroy/agentspec/issues"
+  },
+  "homepage": "https://github.com/ColtonMcInroy/agentspec#readme",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "QUICKSTART.md"
+  ],
   "dependencies": {
     "commander": "^11.1.0",
     "ink": "^4.4.1",
