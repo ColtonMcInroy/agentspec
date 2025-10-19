@@ -5,6 +5,17 @@ All notable changes to AgentSpec will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2025-10-19
+
+### Fixed
+
+- **Dynamic Version Loading** - CLI now loads version number from `package.json` instead of hardcoded value
+- `agentspec --version` now correctly displays the current version from package.json
+
+### Changed
+
+- Updated imports in `cli.ts` to use `node:` prefix for built-in modules (fs, url, path) following Node.js best practices
+
 ## [1.1.0] - 2025-10-19
 
 ### Added

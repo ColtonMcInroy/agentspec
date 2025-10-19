@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
 import { initCommand } from './commands/init.js';
 import { finishCommand } from './commands/finish.js';
 import { listCommand } from './commands/list.js';
@@ -10,12 +13,18 @@ import { showCommand } from './commands/show.js';
 import { updateCommand } from './commands/update.js';
 import { finalizeCommand } from './commands/finalize.js';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const packageJson = JSON.parse(
+  readFileSync(join(__dirname, '../package.json'), 'utf-8')
+);
+
 const program = new Command();
 
 program
   .name('agentspec')
   .description('A tool for enhancing guided agentic development with structured specifications and workflows')
-  .version('1.0.0');
+  .version(packageJson.version);
 
 program
   .command('init')
