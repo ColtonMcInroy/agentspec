@@ -5,7 +5,25 @@ All notable changes to AgentSpec will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2024-01-15
+## [1.1.0] - 2025-10-19
+
+### Added
+
+- **Baseline Specification Generation** - Existing project onboarding now includes automatic generation of initial specifications in `.agentspec/specs/`
+- New step in `agentspec-setup-existing-project` workflow to create spec files for major components (frontend, backend, database, etc.)
+- Comprehensive spec templates with examples for documenting existing systems
+- Updated `agentspec-onboarding-existing.md` rule to include spec generation in goals
+
+### Changed
+
+- Enhanced existing project onboarding workflow with detailed spec generation guidance
+- Improved documentation for capturing current state of existing projects
+
+### Why This Matters
+
+When integrating AgentSpec into an existing project, it's crucial to have baseline specifications that document the current state. This allows future ECOs to build upon and modify existing specs rather than starting from scratch. Without initial specs, the first ECO would have no context about what currently exists.
+
+## [1.0.0] - 2025-10-18
 
 ### Added
 

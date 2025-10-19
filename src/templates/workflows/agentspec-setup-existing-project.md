@@ -298,15 +298,124 @@ Note areas where AgentSpec can help:
 - [Improvement 5]
 ```
 
-### 7. Review with User
+### 7. Generate Initial Specifications
 
-Go through project.md with the user:
+Create baseline specifications for the existing project in `.agentspec/specs/`:
+
+**Identify Major Components:**
+
+Based on your analysis, identify the major subsystems that need specifications:
+- Frontend (if applicable)
+- Backend/API
+- Database
+- Infrastructure
+- External integrations
+- Other major components
+
+**Create Spec Files:**
+
+For each major component, create a specification directory with `spec.md` and `tests.md`:
+
+**Example: Backend API Spec**
+
+`.agentspec/specs/backend/spec.md`:
+```markdown
+# Backend API Specification
+
+## Overview
+[Description of the backend API from your analysis]
+
+## Technology Stack
+- **Framework**: [e.g., Express.js, FastAPI]
+- **Language**: [e.g., Node.js, Python]
+- **Database**: [e.g., PostgreSQL, MongoDB]
+
+## Architecture
+[Current architecture from your analysis]
+
+## API Endpoints
+
+### [Endpoint Category 1]
+[Document existing endpoints you found]
+
+#### GET /api/[resource]
+- **Purpose**: [What it does]
+- **Parameters**: [Query params, path params]
+- **Response**: [Response format]
+- **Authentication**: [Auth requirements]
+
+[Continue for other endpoints...]
+
+## Data Models
+[Document existing data structures]
+
+## Authentication & Authorization
+[Current auth approach]
+
+## Error Handling
+[Current error handling patterns]
+
+## Performance Considerations
+[Any performance patterns observed]
+
+## Known Issues
+[Technical debt or issues identified]
+```
+
+`.agentspec/specs/backend/tests.md`:
+```markdown
+# Backend API Tests
+
+## Test Coverage
+[Current test coverage if available]
+
+## Test Framework
+[Testing framework used]
+
+## Test Categories
+
+### Unit Tests
+[Existing unit tests]
+
+### Integration Tests
+[Existing integration tests]
+
+### API Tests
+[Existing API tests]
+
+## Test Commands
+```bash
+[How to run tests from package.json or Makefile]
+```
+
+## Coverage Requirements
+[Current or desired coverage levels]
+```
+
+**Create Specs for Each Component:**
+
+Repeat this process for:
+- Frontend (if applicable)
+- Database schema
+- Infrastructure/deployment
+- Any other major components
+
+**Keep Specs Factual:**
+- Document what currently exists
+- Note gaps or missing tests
+- Capture current patterns and conventions
+- Don't redesign - just document
+
+### 8. Review with User
+
+Go through project.md and generated specs with the user:
 
 **Verify Accuracy:**
 - Is the description correct?
 - Are all technologies captured?
 - Is the architecture accurate?
 - Are there missing components?
+- Do the specs accurately reflect the current state?
 
 **Clarify Uncertainties:**
 - Ask about unclear patterns
@@ -315,11 +424,12 @@ Go through project.md with the user:
 - Understand historical context
 
 **Get Approval:**
-- User confirms accuracy
+- User confirms accuracy of project.md
+- User confirms specs reflect current state
 - User satisfied with completeness
 - Ready to move to production mode
 
-### 8. Finalize Setup
+### 9. Finalize Setup
 
 Once the user approves project.md, inform them:
 

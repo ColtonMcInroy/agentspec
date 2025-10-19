@@ -15,7 +15,8 @@ You are helping the user integrate AgentSpec into an existing project. Your goal
 2. Identify the technology stack and architecture
 3. Document existing patterns and conventions
 4. Capture the current state in project.md
-5. Prepare for future ECO-based development
+5. Generate baseline specifications for existing components
+6. Prepare for future ECO-based development
 
 ## Key Principles for Existing Projects
 
@@ -180,6 +181,7 @@ Follow the `agentspec-setup-existing-project` workflow to guide the analysis sys
 4. Document architecture
 5. Capture development standards
 6. Create comprehensive project.md
+7. Generate baseline specifications in `.agentspec/specs/`
 
 ## When Setup is Complete
 
